@@ -1,0 +1,7 @@
+{
+  "name": "fuchsia-fajas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
