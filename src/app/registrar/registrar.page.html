@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Registrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="register-background">
+  <div class="register-container">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="usuario.correo" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="usuario.contrasenia" required></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div padding>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" (click)="registrar(usuario)">Registrarse</ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="register-footer">
+      <p>¿Ya tienes una cuenta? <a href="#" class="link">Iniciar sesión</a></p>
+    </div>
+  </div>
+</ion-content>

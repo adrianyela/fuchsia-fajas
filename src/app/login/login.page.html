@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Fuchsia Fajas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="login-background">
+  <div class="login-container">
+    <h1 class="login-title">Bienvenido de nuevo</h1>
+    <p class="login-subtitle">Inicia sesión para continuar</p>
+
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="usuario.correo" clearInput></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="usuario.contrasenia" clearInput></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color="primary" (click)="ingresar(usuario)">
+            Ingresar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color="secondary" routerLink="/registrar" routerDirection="root">
+            Registrar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" class="google-button" (click)="loginGoogleAuth()">
+            <img src="assets/google-logo.svg" alt="Google logo">
+            Registrate con Google
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
